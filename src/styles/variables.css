@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --orange: #f0a868;
+  --orange-light: #ffe8c2;
+  --green: #6a8d73;
+  --green-light: #f4fdd9;
+  --white: #fff8e9;
+  --dark-brown: #493b2a;
+
+  --primary-font: 'Press Start 2P', system-ui;
+}
