@@ -5,7 +5,6 @@ import GameCard from '../../components/GameCard'
 export function Home() {
   return (
     <>
-      {/* Main body */}
       <div className='games-container'>
         <div className='greeting'>Hello!</div>
 
