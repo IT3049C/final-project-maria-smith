@@ -1,5 +1,13 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+}
+
 body {
   margin: 0;
+
   background-color: var(--orange-light);
   color: var(--brown-dark);
   font-family: var(--primary-font);

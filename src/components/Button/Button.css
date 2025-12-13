@@ -1,0 +1,12 @@
+.button {
+  padding: 1rem 1.2rem;
+
+  border: var(--border-thin);
+  text-align: center;
+  transition: .2s;
+
+  &:hover {
+    filter: brightness(92%);
+    cursor: pointer;
+  }
+}

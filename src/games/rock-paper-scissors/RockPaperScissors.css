@@ -1,0 +1,44 @@
+.rps-container {
+  display: grid;
+  grid-template-columns: .5fr 1.2fr;
+
+  height: 100%;
+  padding: 3rem 6rem 4.5rem 6rem;
+  box-sizing: border-box;
+}
+
+.rps-left {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.moves-container {
+  margin-right: 9rem;
+  div {
+    margin-bottom: 3rem;
+  }
+}
+
+.settings-container {
+  margin-top: auto;
+}
+
+.game-count {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.resettings {
+  display: flex;
+  align-items: center;
+}
+
+.resettings img {
+  margin-left: 1.5rem;
+  height: 2.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
