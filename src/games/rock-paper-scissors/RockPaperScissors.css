@@ -42,3 +42,28 @@
     cursor: pointer;
   }
 }
+
+.rps-right {
+  display: grid;
+  grid-template-rows: 1fr 3fr .8fr;
+
+  font-size: 1.3rem;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.5rem 0;
+
+  div {
+    text-align: center;
+  }
+}
+
+.move-board {
+  
+}
+
+.results {
+  text-align: center;
+}

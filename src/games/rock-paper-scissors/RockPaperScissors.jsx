@@ -32,7 +32,15 @@ export function RockPaperScissors() {
         </div>
 
         <div className='rps-right'>
-          Test
+          <div className='scoreboard'>
+            <div>Maria: 0</div>
+            <div>Ties: 0</div>
+            <div>CPU: 0</div>
+          </div>
+          <div className='move-board'>
+            Content
+          </div>
+          <div className='results'>Results</div>
         </div>
       </div>
     </>
