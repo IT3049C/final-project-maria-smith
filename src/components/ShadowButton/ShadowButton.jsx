@@ -1,8 +1,8 @@
 import './ShadowButton.css'
 
-const ShadowButton = ({ text }) => {
+const ShadowButton = ({ text, onClick }) => {
   return (
-      <div className="shadow-button">
+      <div onClick={onClick} className="shadow-button">
         {text}
       </div>
   )

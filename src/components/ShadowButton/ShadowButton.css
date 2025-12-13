@@ -7,6 +7,7 @@
   box-shadow: 7px 7px var(--orange);
 
   text-align: center;
+  text-transform: capitalize;
   transition: .2s;
 
   &:hover {
