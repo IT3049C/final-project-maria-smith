@@ -31,6 +31,10 @@ export function RockPaperScissors() {
     cpuImg: ''
   });
   const [resultMsg, setResultMsg] = useState('');
+
+  // Forces animations every move
+  const [animationKey, setAnimationKey] = useState(0);
+  
   const moves = Object.keys(beats);
 
   const playRound = (move) => {
@@ -42,6 +46,7 @@ export function RockPaperScissors() {
       cpu: cpuMove,
       cpuImg: moveImgs[cpuMove]
     });
+    setAnimationKey(prev => prev + 1);
 
     const outcome = decideWinner(move, cpuMove);
     
@@ -93,8 +98,9 @@ export function RockPaperScissors() {
           <Scoreboard score={score}/>
           <GameBoard 
             moves={currentMoves}
+            resultMsg={resultMsg}
+            key={animationKey}
           />
-          <div className='results'>{resultMsg}</div>
         </div>
       </div>
     </>
