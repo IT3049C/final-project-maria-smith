@@ -1,0 +1,25 @@
+.game-card {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+  color: var(--brown-dark);
+  text-decoration: none;
+
+  border: var(--border-thin);
+  background-color: var(--white);
+
+  div {
+    padding: 1rem;
+  }
+}
+
+.game-img {
+
+}
+
+.game-label {
+  display: flex;
+  align-items: center;
+
+  border-top: var(--border-thin);
+}

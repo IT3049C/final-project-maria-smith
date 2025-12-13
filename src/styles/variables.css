@@ -6,7 +6,9 @@
   --green: #6a8d73;
   --green-light: #f4fdd9;
   --white: #fff8e9;
-  --dark-brown: #493b2a;
+  --brown-dark: #493b2a;
+
+  --border-thin: 2px solid var(--brown-dark);
 
   --primary-font: 'Press Start 2P', system-ui;
 }
