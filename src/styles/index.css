@@ -1,5 +1,6 @@
 body {
   margin: 0;
   background-color: var(--orange-light);
+  color: var(--brown-dark);
   font-family: var(--primary-font);
 }
