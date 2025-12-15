@@ -3,7 +3,7 @@ import gear from '../../../shared/assets/gear.svg'
 
 import '../TicTacToe.css'
 
-const SettingsContainer = ({ gameCount, onReset }) => {
+const SettingsContainer = ({ gameCount, onEndGame }) => {
   return (
     <div className='ttt-settings'>
       <div className='ttt-game-count'>Games: {gameCount}</div>
@@ -12,7 +12,7 @@ const SettingsContainer = ({ gameCount, onReset }) => {
           text='End Game'
           padding='1rem 1.2rem'
           fontSize='1.2rem'
-          onClick={onReset}
+          onClick={onEndGame}
         />
         <img src={gear} alt='settings gear icon' />
       </div>

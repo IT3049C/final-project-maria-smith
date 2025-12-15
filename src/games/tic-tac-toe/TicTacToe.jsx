@@ -77,7 +77,7 @@ export function TicTacToe() {
           </div>
           <SettingsContainer
             gameCount={gameCount}
-            onReset={resetBoard}
+            onEndGame={() => {navigate('/')}}
           />
         </div>
         <GameBoard 
