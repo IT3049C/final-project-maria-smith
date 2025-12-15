@@ -16,7 +16,7 @@ const Button = ({
     <button 
       onClick={onClick}
       className='button'
-      aria-label='text'
+      aria-label={text}
       style={{ 
         padding: padding,
         backgroundColor: colorMap[color],
