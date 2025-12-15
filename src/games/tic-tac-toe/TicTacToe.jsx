@@ -6,6 +6,7 @@ import Scoreboard from './components/Scoreboard'
 import GameBoard from './components/Gameboard';
 import SettingsContainer from './components/SettingsContainer';
 import ResultModal from './components/ResultModal';
+import ModesModal from './components/ModesModal';
 
 import './TicTacToe.css'
 import { makeMove, checkWinner, getInitialBoard, getNextPlayer } from './logic/ticTacToe';
@@ -25,6 +26,7 @@ export function TicTacToe() {
   });
   const [result, setResult] = useState(null);
 
+  const [showModesModal, setShowModesModal] = useState(true);
   const [showResultModal, setShowResultModal] = useState(false);
 
   const handleCellClick = (index) => {
@@ -66,6 +68,10 @@ export function TicTacToe() {
         result={result}
         onPlayAgain={resetBoard}
         onQuit={() => {navigate('/')}}
+      />
+      <ModesModal 
+        isVisible={showModesModal}
+        onClose={() => {setShowModesModal(false)}}
       />
       <div className="ttt-container">
         <div className="ttt-left">

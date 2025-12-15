@@ -89,3 +89,80 @@
   gap: 4rem;
   margin: 3rem 1.5rem 0 1.5rem;
 }
+
+.ttt-modes-modal {
+  max-width: 40rem;
+}
+
+.ttt-modes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ttt-modes-header-action {
+  max-height: 1.5rem;
+
+  &:hover {
+    filter: brightness(.8);
+    cursor: pointer;
+  }
+}
+
+.ttt-modes-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+.ttt-modes-options > div {
+  border: var(--border-thin);
+  box-shadow: 7px 7px var(--orange);
+  transition: .2s;
+
+  &:hover {
+    filter: brightness(.8);
+    cursor: pointer;
+  }
+
+  div {
+    padding: 1.5rem;
+  }
+
+  :first-child {
+    font-size: 1.2rem;
+    border-bottom: var(--border-thin);
+  }
+
+  :nth-child(2) {
+    font-size: .8rem;
+  }
+}
+
+.ttt-game-code {
+  display: flex;
+  flex-direction: column;
+
+  
+  input {
+    margin-top: .5rem;
+    padding: .5rem;
+
+    font-family: var(--font);
+    background-color: var(--orange-light);
+    border: var(--border-thin);
+  }
+}
+
+.ttt-wait-rm-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div, button {
+    margin: 1.2rem 0;
+  }
+}

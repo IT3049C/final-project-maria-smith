@@ -8,6 +8,7 @@ const colorMap = {
 const Button = ({ 
   text, 
   onClick, 
+  margin = '',
   padding = '.8rem 1rem',
   color = 'orange', 
   fontSize = '1rem'
@@ -18,6 +19,7 @@ const Button = ({
       className='button'
       aria-label={text}
       style={{ 
+        margin: margin,
         padding: padding,
         backgroundColor: colorMap[color],
         fontSize: fontSize
