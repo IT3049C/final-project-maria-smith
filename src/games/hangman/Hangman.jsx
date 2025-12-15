@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useSettings } from '../../context/SettingsContext';
 import './Hangman.css';
 
 const WORDS = [
@@ -10,6 +11,7 @@ const WORDS = [
 const MAX_WRONG_GUESSES = 6;
 
 export function Hangman() {
+  const { settings } = useSettings();
   const [word, setWord] = useState('');
   const [guessedLetters, setGuessedLetters] = useState(new Set());
   const [wrongGuesses, setWrongGuesses] = useState(0);
@@ -69,7 +71,8 @@ export function Hangman() {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
   return (
-    <div className="hangman-container">      
+    <div className="hangman-container">   
+      <div>Player: {settings?.playerName}</div>   
       <div className="hangman-drawing">
         <svg width="200" height="250">
           {/* Gallows */}

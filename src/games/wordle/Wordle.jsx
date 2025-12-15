@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSettings } from '../../context/SettingsContext';
 import ResultModal from './components/ResultModal';
 import './Wordle.css';
 
@@ -31,6 +32,7 @@ async function isValidWord(word) {
 
 export function Wordle() {
   const navigate = useNavigate();
+  const { settings } = useSettings();
 
   const [targetWord, setTargetWord] = useState('');
   const [currentAttempt, setCurrentAttempt] = useState(0);
@@ -214,6 +216,7 @@ export function Wordle() {
         onPlayAgain={resetGame}
         onQuit={() => {navigate('/')}}
       />
+      <div>Player: {settings?.playerName}</div>
       <div id="game">
         <div id="wordle-grid">
           {grid.map((row, rowIndex) =>
