@@ -10,8 +10,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "playwright test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
