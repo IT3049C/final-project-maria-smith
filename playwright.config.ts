@@ -1,17 +1,28 @@
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
+  globalTimeout: 60000,
   testDir: "./tests",
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+  reporter: "list",
   use: {
-    baseURL: "http://localhost:5173",
-    headless: true,
-    viewport: { width: 1200, height: 800 },
+    baseURL: "http://localhost:5173/final-project-maria-smith",
+    trace: "on-first-retry",
   },
+  projects: [
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+    },
+  ],
   webServer: {
-    command: "npm run build && npm run preview",
-    url: "http://localhost:5173",
-    timeout: 120_000,
+    command: "npm run dev",
+    url: "http://localhost:5173/final-project-maria-smith",
     reuseExistingServer: !process.env.CI,
   },
-  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
 });
+
+

@@ -1,0 +1,32 @@
+.game-card {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+  border: var(--border-thin);
+  background-color: var(--white);
+
+  div {
+    padding: 1rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.game-img {
+  margin: auto;
+}
+
+.game-thumbnail {
+  margin: auto;
+  max-height: 12rem;
+  max-width: 16rem;
+}
+
+.game-label {
+  display: flex;
+  align-items: center;
+
+  border-top: var(--border-thin);
+}
