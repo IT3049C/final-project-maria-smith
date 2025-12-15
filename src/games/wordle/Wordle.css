@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import 'animate.css';
+
+/* :root {
+  --background-color: #1b1b1b;
+  --secondary-bg-color: #292929;
+  --border-color: #3A3A3C;
+  --incorrect: #3A3A3C;
+  --misplaced: #b4a03b;
+  --correct: #538d4f;
+  --text-color: #f1f1f1;
+} */
+
+:root {
+  /* --background-color: #f5f5f5;
+  --secondary-bg-color: #e5e3e3; */
+  --border-color: #ced0d3;
+  --incorrect: #777c7f;
+  --misplaced: #c9b459;
+  --correct: #69aa63;
+  /* --text-color: #121213; */
+}
+
+/* 
+ACTUAL
+correct- #538d4f, #69aa63
+misplaced- #b4a03b, #c9b459
+incorrect- #3a393c, #777c7f
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wordle-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+.correct {
+  background-color: var(--correct);
+  border-color: var(--correct);
+}
+
+.misplaced {
+  background-color: var(--misplaced);
+  border-color: var(--misplaced);
+}
+
+.incorrect {
+  background-color: var(--incorrect);
+  border-color: var(--incorrect);
+}
+
+.wordle-result-header {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.wordle-result-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin: 3rem 1.5rem 0 1.5rem;  
+}
